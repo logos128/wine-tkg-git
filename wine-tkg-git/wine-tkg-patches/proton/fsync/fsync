@@ -68,7 +68,7 @@
 	          _patchname='server_Abort_waiting_on_a_completion_port_when_closing_it-no_alloc_handle-c6f2aac.patch' && _patchmsg="Added Abort waiting on a completion port when closing it Proton patch (no_alloc_handle edition)" && nonuser_patcher
 	        fi
 	      fi
-	    elif [ "$_protonify" = "true" ] && git merge-base --is-ancestor 2633a5c1ae542f08f127ba737fa59fb03ed6180b HEAD; then
+	    elif [ "$_protonify" = "true" ] && git merge-base --is-ancestor 2633a5c1ae542f08f127ba737fa59fb03ed6180b HEAD && ! git merge-base --is-ancestor 37eab1f496b1e7540631760956a5ca97ef4d4b76 HEAD; then
 	      if git merge-base --is-ancestor d6ef9401b3ef05e87e0cadd31992a6809008331e HEAD; then
 	        _patchname='server_Abort_waiting_on_a_completion_port_when_closing_it.patch' && _patchmsg="Added Abort waiting on a completion port when closing it Proton patch" && nonuser_patcher
 	      elif git merge-base --is-ancestor c6f2aacb5761801a17b930086111f4b2c4a30075 HEAD; then
